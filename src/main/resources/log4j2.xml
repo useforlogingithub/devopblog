@@ -17,7 +17,7 @@
         <console name="console" target="system_out">
             <!-- appender级别的日志过滤 -->
             <!-- <thresholdFilter level="info" onMatch="accept" onMismatch="deny"/> -->
-            <patternLayout pattern="${FORMAT}"/>
+            <PatternLayout pattern="%style{%d{yyyy-MM-dd HH:mm:ss}}{black} %highlight{[%p]} %style{%c{1.}}{blue} - %msg%n%throwable" />
         </console>
         <!-- 常用于开发环境,把日志记录到文件中,默认追加 -->
         <file name="db_log" fileName="${LOG_HOME}/my-blog-db.log" append="true">
